@@ -1,7 +1,45 @@
 <!DOCTYPE html>
 <html>
     <title>New Page</title>
+    <style>
+        @media print{
+            .screen-only{
+                display: none;
+            }
+        }
+        input[type="text"] {
+            color:green;
+        }
+        input[type="number"] {
+            color:blueviolet;
+        }
+    </style>
     <body>
         <h1>Hello, World, <a href=hello.html>Welcome</a> </h1>
+        <form>
+            <div>
+                <input name="name" type="text" placeholder="Name">
+                <input name="password" type="password" placeholder="Password"
+            </div>
+            <div>
+                Favorite color
+                <input name="color" type="radio" value="red"> Red
+                <input name="color" type="radio" value="green"> Green
+            </div>
+            <div>
+                <input name="country" list="countries">
+                <datalist id="countries">
+                    <option value="Taiwan"></option>
+                    <option value="UK"></option>
+                    <option value="US"></option>
+                </datalist>
+            </div>
+            <div>
+                <input name="number" type="number" placeholder="Number">
+            </div>
+            <p class="screen-only">
+                    sadfasdfasdfasdfasdf
+            </p>
+        </form>
     </body>
 </html>
